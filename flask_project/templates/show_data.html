@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% block content %}
+{% for d1 in d: %}
+<h1>{{d1.name}} and {{d1.org}}</h1>
+{% endfor %}
+{% endblock content %}
+</body>
+</html>

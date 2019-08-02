@@ -1,0 +1,12 @@
+body{
+	background: #A4A4F2;
+}
+.container{
+	background: pink;
+	width: 50%;
+	margin: 25%;
+	padding: 2%;
+	padding-right:2%;
+	border-radius:10%;
+	box-shadow: 4px 4px 4px 4px;
+}

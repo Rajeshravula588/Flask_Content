@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Data</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+</script>
+</head>
+<body>
+	<marquee><h1>STUDENT DETAILS</h1></marquee>
+	<table class="table">
+		<tr>
+
+			<th>Id</th>
+			<th>Name</th>
+			<th>Surname</th>
+			<th>Roll number</th>
+			<th>Mobile number</th>
+			<th>Branch</th>
+		</tr>
+		{% for r in register %}
+		<tr>
+			<td class="warning">{{r.id}}</td>
+			<td class="info">{{r.name}}</td>
+			<td class="active">{{r.surname}}</td>
+			<td class="success">{{r.rollno}}</td>
+			<td class="danger">{{r.mobile}}</td>
+			<td class="warning">{{r.branch}}</td>
+			<td><a href=" {{url_for('editData',register_id=r.id)}}">Edit</a></td>
+			<td><a href=" {{url_for('deleteData',register_id=r.id)}}">Delete</a></td>
+		</tr>
+		{% endfor %}
+
+	</table>
+	<br><br><br><a href=" {{url_for('addData')}}"> ADD</a>
+</body>
+</html>
